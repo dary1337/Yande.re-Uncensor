@@ -1,0 +1,14 @@
+{
+  "name": "yandere-uncensor",
+  "version": "1.1.0",
+  "description": "Unlocks 18+ posts on Yande.re for guests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "crx3": "^2.0.0"
+  }
+}
