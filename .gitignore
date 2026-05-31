@@ -1,6 +1,14 @@
 # Extension signing key — NEVER commit
 *.pem
 
+# Build artifacts (produced by CI / npm run build)
+dist/
+*.crx
+*.zip
+
+# Dependencies
+node_modules/
+
 # OS / editor noise
 .DS_Store
 Thumbs.db
