@@ -1,0 +1,8 @@
+# Extension signing key — NEVER commit
+*.pem
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
