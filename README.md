@@ -1,5 +1,6 @@
 # Yande.re Uncensor
 
+[![release](https://github.com/dary1337/Yande.re-Uncensor/actions/workflows/release.yml/badge.svg)](https://github.com/dary1337/Yande.re-Uncensor/actions/workflows/release.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue.svg)](manifest.json)
 [![Userscript](https://img.shields.io/badge/Tampermonkey-userscript-success.svg)](#method-1--userscript-easiest)
@@ -70,7 +71,7 @@ The simplest way. Works in Chrome, Edge, Brave, Firefox, Opera, and mobile (Kiwi
 
 Use this if you prefer a real extension instead of a userscript.
 
-1. Download the latest **zip** from the [Releases](https://github.com/dary1337/Yande.re-Uncensor/releases) page and unpack it to a permanent folder.
+1. Download [**`yandere-uncencor.zip`**](https://github.com/dary1337/Yande.re-Uncensor/releases/latest/download/yandere-uncencor.zip) from the latest release and unpack it to a permanent folder.
 2. Open your browser's extensions page:
    - Chrome / Brave: `chrome://extensions`
    - Edge: `edge://extensions`
@@ -84,7 +85,7 @@ Use this if you prefer a real extension instead of a userscript.
 
 Mobile Chromium browsers like **Kiwi Browser** can install a packed `.crx` directly (there is no "Load unpacked" on mobile).
 
-1. Download [`yandere-uncencor.crx`](yandere-uncencor.crx) to your phone.
+1. Download [`yandere-uncencor.crx`](https://github.com/dary1337/Yande.re-Uncensor/releases/latest/download/yandere-uncencor.crx) to your phone.
 2. Open **Kiwi** → menu → **Extensions**.
 3. Tap **+ (from .crx file)** and select the downloaded `yandere-uncencor.crx`.
 4. Confirm the install — then open [yande.re](https://yande.re).
@@ -114,7 +115,10 @@ The userscript (Method 1) is the recommended path for Firefox. A signed `.xpi` m
 | --- | --- |
 | [`manifest.json`](manifest.json) | Manifest V3 extension manifest |
 | [`main.js`](main.js) | Content script (the actual logic) |
-| [`yandere-uncencor.crx`](yandere-uncencor.crx) | Packed build for mobile Chromium browsers (Kiwi) |
+| [`scripts/build.mjs`](scripts/build.mjs) | Packs & signs the `.zip` / `.crx` (run via `npm run build`) |
+| [`.github/workflows/release.yml`](.github/workflows/release.yml) | CI: on a `v*` tag, builds and publishes the release |
+
+> The signed `.crx` and `.zip` are **build artifacts** — they are produced by CI and attached to each [release](https://github.com/dary1337/Yande.re-Uncensor/releases), not committed to the repo.
 
 ---
 
