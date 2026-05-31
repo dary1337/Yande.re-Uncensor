@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Yande.re Uncensor",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Disables blocking of 18+ content for unregistered users Yande.re",
   "permissions": [],
   "content_scripts": [
